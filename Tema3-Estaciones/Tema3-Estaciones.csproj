@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <RootNamespace>Tema3_Estaciones</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>resources\32.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="invierno.jpg" />
+    <None Remove="otoño.jpg" />
+    <None Remove="primavera.jpg" />
+    <None Remove="resources\32.ico" />
+    <None Remove="resources\invierno.jpg" />
+    <None Remove="resources\otoño.jpg" />
+    <None Remove="resources\primavera.jpg" />
+    <None Remove="resources\verano.jpg" />
+    <None Remove="verano.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="resources\32.ico" />
+    <Content Include="resources\otoño.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="invierno.jpg" />
+    <Resource Include="otoño.jpg" />
+    <Resource Include="primavera.jpg" />
+    <Resource Include="resources\32.ico" />
+    <Resource Include="resources\invierno.jpg" />
+    <Resource Include="resources\primavera.jpg" />
+    <Resource Include="resources\verano.jpg" />
+    <Resource Include="verano.jpg" />
+  </ItemGroup>
+
+</Project>

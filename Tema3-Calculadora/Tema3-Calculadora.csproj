@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <RootNamespace>Tema3_Calculadora</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>resources\16.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="resources\16.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="resources\16.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="resources\16.ico" />
+  </ItemGroup>
+
+</Project>

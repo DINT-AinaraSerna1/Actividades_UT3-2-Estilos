@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <RootNamespace>Tema3_VisorImagenes</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>resources\16.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="episodioIV.jpg" />
+    <None Remove="resources\16.ico" />
+    <None Remove="resources\episodioIV.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="resources\16.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="episodioIV.jpg" />
+    <Resource Include="resources\16.ico" />
+    <Resource Include="resources\episodioIV.jpg" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,83 @@
+﻿<Window x:Class="Tema3_Formulario.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tema3_Formulario"
+        mc:Ignorable="d"
+        Title="Tema 3 - Formulario" Height="480" Width="810" MinHeight="480" MinWidth="810">
+    <DockPanel LastChildFill="True">
+        <DockPanel DockPanel.Dock="Bottom" LastChildFill="False">
+            <TextBlock DockPanel.Dock="Left" Margin="5">Javier Catalá</TextBlock>
+            <Button DockPanel.Dock="Right" Margin="5" Content="Cancelar"></Button>
+            <Button DockPanel.Dock="Right" Margin="5" Content="Aceptar"></Button>
+        </DockPanel>
+        <TextBlock DockPanel.Dock="Top" HorizontalAlignment="Center" FontSize="30" Margin="10" FontWeight="Bold">
+            Formulario
+        </TextBlock>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Image Grid.Column="1" Stretch="Fill" Source="/foto.jpg" Margin="10"></Image>
+            <StackPanel Grid.Column="0" Margin="5">
+                <Border BorderBrush="Black" BorderThickness="2" CornerRadius="5" Margin="5" Background="LightBlue">
+
+                    <Grid Margin="5">
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="70"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="25"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Row="0" Grid.Column="0" Margin="1">Nombre</Label>
+                        <TextBox Grid.Row="0" Grid.Column="1" Margin="1"></TextBox>
+                        <Image Grid.Row="0" Grid.Column="2" Source="/info.png"></Image>
+                        <Label Grid.Row="1" Grid.Column="0" Margin="1">Edad</Label>
+                        <TextBox Grid.Row="1" Grid.Column="1" Margin="1"></TextBox>
+                        <Image Grid.Row="1" Grid.Column="2" Source="/info.png" Margin="1"></Image>
+                        <Label Grid.Row="2" Grid.Column="0" Margin="1">Dirección</Label>
+                        <TextBox Grid.Row="2" Grid.Column="1" Margin="1"></TextBox>
+                        <Image Grid.Row="2" Grid.Column="2" Source="/info.png" Margin="1"></Image>
+                    </Grid>
+                </Border>
+                <Border BorderThickness="2" CornerRadius="5" Margin="5" BorderBrush="Black" Background="LightGreen">
+                    <WrapPanel MinWidth="475">
+                        <Border BorderBrush="Beige" MinWidth="200" BorderThickness="1" CornerRadius="3" Margin="10">
+                            <TextBlock>
+                                <StackPanel Margin="5">
+                                    <Label>Aficiones</Label>
+                                        <StackPanel>
+                                            <CheckBox>Hacer deporte</CheckBox>
+                                            <CheckBox>Viajar</CheckBox>
+                                            <CheckBox>Ver series</CheckBox>
+                                            <CheckBox>Leer cómics</CheckBox>
+                                        </StackPanel>
+                                </StackPanel>
+                            </TextBlock>
+                        </Border>
+                        <Border BorderBrush="Beige" MinWidth="200" BorderThickness="1" CornerRadius="3" Margin="10">
+                            <TextBlock>
+                                <StackPanel Margin="5">
+                                    <Label>Estado civil</Label>
+                                    <StackPanel>
+                                        <RadioButton>Soltero</RadioButton>
+                                        <RadioButton>Casado</RadioButton>
+                                        <RadioButton>Divorciado</RadioButton>
+                                        <RadioButton>Viudo</RadioButton>
+                                    </StackPanel>
+                                </StackPanel>
+                            </TextBlock>
+                        </Border>
+                    </WrapPanel>
+                </Border>
+            </StackPanel>
+        </Grid>
+
+    </DockPanel>
+</Window>

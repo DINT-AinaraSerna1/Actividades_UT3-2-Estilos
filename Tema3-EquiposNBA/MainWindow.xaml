@@ -1,0 +1,47 @@
+﻿<Window x:Class="Tema3_EquiposNBA.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tema3_EquiposNBA"
+        mc:Ignorable="d"
+        Title="Tema 3 - Equipos NBA" Height="424" Width="800">
+    <StackPanel Margin="0,0,0,26">
+        <Border BorderThickness="3" CornerRadius="3" BorderBrush="Black" Margin="10">
+            <StackPanel x:Name="lakersStackPanel">
+                <StackPanel.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFCAE434" Offset="0.893"/>
+                        <GradientStop Color="#FF8F4FE0" Offset="0.073"/>
+                    </LinearGradientBrush>
+                </StackPanel.Background>
+                <TextBlock TextWrapping="Wrap" Text="Los Ángeles Lakers" FontSize="30" FontWeight="Bold" HorizontalAlignment="Center"></TextBlock>
+                <WrapPanel>
+                    <Image Source="/9_lakers.png" Width="150"></Image>
+                    <Image Source="/14_lakers.png" Width="150"></Image>
+                    <Image Source="/23_lakers.png" Width="150"></Image>
+                    <Image Source="/3_lakers.png" Width="150"></Image>
+                    <Image Source="/39_lakers.png" Width="150"></Image>
+                </WrapPanel>
+            </StackPanel>
+        </Border>
+        <Border BorderThickness="3" CornerRadius="3" BorderBrush="Black" Margin="10">
+            <StackPanel x:Name="miamiStackPanel">
+                <StackPanel.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFE42D10" Offset="0.893"/>
+                        <GradientStop Color="#FF060606" Offset="0.073"/>
+                    </LinearGradientBrush>
+                </StackPanel.Background>
+                <TextBlock TextWrapping="Wrap" Text="Miami Heat" FontSize="30" FontWeight="Bold" HorizontalAlignment="Center" Foreground="White"></TextBlock>
+                <WrapPanel>
+                    <Image Width="150" Source="/7_heat.png"></Image>
+                    <Image Width="150" Source="/14_heat.png"></Image>
+                    <Image Width="150" Source="/22_heat.png"></Image>
+                    <Image Width="150" Source="/99_heat.png"></Image>
+                    <Image Width="150" Source="/13_heat.png"></Image>
+                </WrapPanel>
+            </StackPanel>
+        </Border>
+    </StackPanel>
+</Window>
