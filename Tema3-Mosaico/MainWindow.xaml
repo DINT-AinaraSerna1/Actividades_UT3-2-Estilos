@@ -6,15 +6,38 @@
         xmlns:local="clr-namespace:Tema3_Mosaico"
         mc:Ignorable="d"
         Title="Tema 3 - Mosaico" Height="450" Width="500" MinHeight="450" MinWidth="450">
+    <Window.Resources>
+        <Style TargetType="{x:Type TextBlock}" x:Key="Arriba">
+            <Setter Property="DockPanel.Dock" Value="Top"></Setter>
+            <Setter Property="Height" Value="100"></Setter>
+        </Style>
+        <Style TargetType="{x:Type TextBlock}" x:Key="Izquierda">
+            <Setter Property="DockPanel.Dock" Value="Left"></Setter>
+            <Setter Property="Width" Value="100"></Setter>
+        </Style>
+        <Style TargetType="{x:Type TextBlock}" x:Key="Derecha">
+            <Setter Property="DockPanel.Dock" Value="Right"></Setter>
+            <Setter Property="Width" Value="100"></Setter>
+        </Style>
+        <Style TargetType="{x:Type TextBlock}" x:Key="Abajo">
+            <Setter Property="DockPanel.Dock" Value="Bottom"></Setter>
+            <Setter Property="Height" Value="100"></Setter>
+        </Style>
+        <Style TargetType="{x:Type TextBlock}" x:Key="CajaCentral">
+            <Setter Property="Background" Value="Black"></Setter>
+            <Setter Property="MinWidth" Value="100"></Setter>
+            <Setter Property="MinHeight" Value="100"></Setter>
+        </Style>
+    </Window.Resources>
     <DockPanel LastChildFill="True">
-        <TextBlock DockPanel.Dock="Top" Background="#FF8C42E8" Height="100"></TextBlock>
-        <TextBlock DockPanel.Dock="Left" Background="#FF8C42E8" Width="100"></TextBlock>
-        <TextBlock DockPanel.Dock="Right" Background="#FF12A41B" Width="100"></TextBlock>
-        <TextBlock DockPanel.Dock="Bottom" Background="#FF12A41B" Height="100"></TextBlock>
-        <TextBlock DockPanel.Dock="Left" Background="#FFEF8111" Width="100" ></TextBlock>
-        <TextBlock DockPanel.Dock="Bottom" Background="#FFEF8111" Height="100"></TextBlock>
-        <TextBlock DockPanel.Dock="Top" Background="#FFE735F1" Height="100"></TextBlock>
-        <TextBlock DockPanel.Dock="Right" Background="#FFE735F1" Width="100"></TextBlock>
-        <TextBlock Background="Black" MinWidth="100" MinHeight="100"></TextBlock>
+        <TextBlock Style="{StaticResource Arriba}" Background="#FF8C42E8"></TextBlock>
+        <TextBlock Style="{StaticResource Izquierda}" Background="#FF8C42E8"></TextBlock>
+        <TextBlock Style="{StaticResource Derecha}" Background="#FF12A41B"></TextBlock>
+        <TextBlock Style="{StaticResource Abajo}" Background="#FF12A41B"></TextBlock>
+        <TextBlock Style="{StaticResource Izquierda}" Background="#FFEF8111"></TextBlock>
+        <TextBlock Style="{StaticResource Abajo}" Background="#FFEF8111"></TextBlock>
+        <TextBlock Style="{StaticResource Arriba}" Background="#FFE735F1"></TextBlock>
+        <TextBlock Style="{StaticResource Derecha}" Background="#FFE735F1"></TextBlock>
+        <TextBlock Style="{StaticResource CajaCentral}"></TextBlock>
     </DockPanel>
 </Window>

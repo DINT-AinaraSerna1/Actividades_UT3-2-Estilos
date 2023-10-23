@@ -6,16 +6,33 @@
         xmlns:local="clr-namespace:Tema3_Estaciones"
         mc:Ignorable="d"
         Title="Tema 3 - Estaciones" Height="450" Width="800" MinHeight="450" MinWidth="800">
+    <Window.Resources>
+        <Style TargetType="{x:Type TextBlock}">
+            <Setter Property="DockPanel.Dock" Value="Top"></Setter>
+            <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+            <Setter Property="FontSize" Value="36"></Setter>
+            <Setter Property="Margin" Value="5"></Setter>
+            <Setter Property="FontFamily" Value="Pristina"></Setter>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+            <Setter Property="Foreground">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFD4F702"/>
+                        <GradientStop Color="#FF0247EF" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style TargetType="{x:Type UniformGrid}">
+            <Setter Property="DockPanel.DataContext" Value="Bottom"></Setter>
+            <Setter Property="Rows" Value="2"></Setter>
+            <Setter Property="Columns" Value="2"></Setter>
+            <Setter Property="VerticalAlignment" Value="Bottom"></Setter>
+        </Style>
+    </Window.Resources>
     <DockPanel Background="#FFCBEAA8">
-        <TextBlock DockPanel.Dock="Top" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="36" Margin="5" FontFamily="Pristina" FontWeight="Bold">
-            <TextBlock.Foreground>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FFD4F702"/>
-                    <GradientStop Color="#FF0247EF" Offset="1"/>
-                </LinearGradientBrush>
-            </TextBlock.Foreground>Las cuatro estaciones
-        </TextBlock>
-        <UniformGrid DockPanel.Dock="Bottom" Rows="2" Columns="2" VerticalAlignment="Bottom">
+        <TextBlock Text="Las cuatro estaciones"></TextBlock>
+        <UniformGrid>
 
             <ScrollViewer Margin="5" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
                 <Image Source="/primavera.jpg"/>

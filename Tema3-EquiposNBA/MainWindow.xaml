@@ -22,20 +22,30 @@
         <Style TargetType="{x:Type Image}">
             <Setter Property="Width" Value="150"></Setter>
         </Style>
-        <!--<Style TargetType="{x:Type LinearGradientBrush}">
-            <Setter Property="EndPoint" Value="0.5,1"></Setter>
-            <Setter Property="StartPoint" Value="0.5,0"></Setter>
-        </Style>-->
-    </Window.Resources>
-    <StackPanel Margin="0,0,0,26">
-        <Border>
-            <StackPanel x:Name="lakersStackPanel">
-                <StackPanel.Background>
+        <Style TargetType="{x:Type StackPanel}" x:Key="Caja1">
+            <Setter Property="Background">
+                <Setter.Value>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#FFCAE434" Offset="0.893"/>
                         <GradientStop Color="#FF8F4FE0" Offset="0.073"/>
                     </LinearGradientBrush>
-                </StackPanel.Background>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style TargetType="{x:Type StackPanel}" x:Key="Caja2">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFE42D10" Offset="0.893"/>
+                        <GradientStop Color="#FF060606" Offset="0.073"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <StackPanel Margin="0,0,0,26">
+        <Border>
+            <StackPanel x:Name="lakersStackPanel" Style="{StaticResource Caja1}">
                 <TextBlock Text="Los Ángeles Lakers"></TextBlock>
                 <WrapPanel>
                     <Image Source="/9_lakers.png"></Image>
@@ -47,13 +57,7 @@
             </StackPanel>
         </Border>
         <Border>
-            <StackPanel x:Name="miamiStackPanel">
-                <StackPanel.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#FFE42D10" Offset="0.893"/>
-                        <GradientStop Color="#FF060606" Offset="0.073"/>
-                    </LinearGradientBrush>
-                </StackPanel.Background>
+            <StackPanel x:Name="miamiStackPanel" Style="{StaticResource Caja2}">
                 <TextBlock Text="Miami Heat" Foreground="White"></TextBlock>
                 <WrapPanel>
                     <Image Source="/7_heat.png"></Image>
