@@ -6,8 +6,29 @@
         xmlns:local="clr-namespace:Tema3_EquiposNBA"
         mc:Ignorable="d"
         Title="Tema 3 - Equipos NBA" Height="424" Width="800">
+    <Window.Resources>
+        <Style TargetType="{x:Type Border}">
+            <Setter Property="BorderThickness" Value="3"></Setter>
+            <Setter Property="BorderBrush" Value="Black"></Setter>
+            <Setter Property="CornerRadius" Value="3"></Setter>
+            <Setter Property="Margin" Value="10"></Setter>
+        </Style>
+        <Style TargetType="{x:Type TextBlock}">
+            <Setter Property="TextWrapping" Value="Wrap"></Setter>
+            <Setter Property="FontSize" Value="30"></Setter>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+            <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+        </Style>
+        <Style TargetType="{x:Type Image}">
+            <Setter Property="Width" Value="150"></Setter>
+        </Style>
+        <!--<Style TargetType="{x:Type LinearGradientBrush}">
+            <Setter Property="EndPoint" Value="0.5,1"></Setter>
+            <Setter Property="StartPoint" Value="0.5,0"></Setter>
+        </Style>-->
+    </Window.Resources>
     <StackPanel Margin="0,0,0,26">
-        <Border BorderThickness="3" CornerRadius="3" BorderBrush="Black" Margin="10">
+        <Border>
             <StackPanel x:Name="lakersStackPanel">
                 <StackPanel.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -15,17 +36,17 @@
                         <GradientStop Color="#FF8F4FE0" Offset="0.073"/>
                     </LinearGradientBrush>
                 </StackPanel.Background>
-                <TextBlock TextWrapping="Wrap" Text="Los Ángeles Lakers" FontSize="30" FontWeight="Bold" HorizontalAlignment="Center"></TextBlock>
+                <TextBlock Text="Los Ángeles Lakers"></TextBlock>
                 <WrapPanel>
-                    <Image Source="/9_lakers.png" Width="150"></Image>
-                    <Image Source="/14_lakers.png" Width="150"></Image>
-                    <Image Source="/23_lakers.png" Width="150"></Image>
-                    <Image Source="/3_lakers.png" Width="150"></Image>
-                    <Image Source="/39_lakers.png" Width="150"></Image>
+                    <Image Source="/9_lakers.png"></Image>
+                    <Image Source="/14_lakers.png"></Image>
+                    <Image Source="/23_lakers.png"></Image>
+                    <Image Source="/3_lakers.png"></Image>
+                    <Image Source="/39_lakers.png"></Image>
                 </WrapPanel>
             </StackPanel>
         </Border>
-        <Border BorderThickness="3" CornerRadius="3" BorderBrush="Black" Margin="10">
+        <Border>
             <StackPanel x:Name="miamiStackPanel">
                 <StackPanel.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -33,13 +54,13 @@
                         <GradientStop Color="#FF060606" Offset="0.073"/>
                     </LinearGradientBrush>
                 </StackPanel.Background>
-                <TextBlock TextWrapping="Wrap" Text="Miami Heat" FontSize="30" FontWeight="Bold" HorizontalAlignment="Center" Foreground="White"></TextBlock>
+                <TextBlock Text="Miami Heat" Foreground="White"></TextBlock>
                 <WrapPanel>
-                    <Image Width="150" Source="/7_heat.png"></Image>
-                    <Image Width="150" Source="/14_heat.png"></Image>
-                    <Image Width="150" Source="/22_heat.png"></Image>
-                    <Image Width="150" Source="/99_heat.png"></Image>
-                    <Image Width="150" Source="/13_heat.png"></Image>
+                    <Image Source="/7_heat.png"></Image>
+                    <Image Source="/14_heat.png"></Image>
+                    <Image Source="/22_heat.png"></Image>
+                    <Image Source="/99_heat.png"></Image>
+                    <Image Source="/13_heat.png"></Image>
                 </WrapPanel>
             </StackPanel>
         </Border>
