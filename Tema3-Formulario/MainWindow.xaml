@@ -6,24 +6,60 @@
         xmlns:local="clr-namespace:Tema3_Formulario"
         mc:Ignorable="d"
         Title="Tema 3 - Formulario" Height="480" Width="810" MinHeight="480" MinWidth="810">
+    <Window.Resources>
+        <Style TargetType="{x:Type TextBlock}" x:Key="Titulo">
+            <Setter Property="DockPanel.Dock" Value="Top"></Setter>
+            <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+            <Setter Property="FontSize" Value="30"></Setter>
+            <Setter Property="Margin" Value="10"></Setter>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+        </Style>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="DockPanel.Dock" Value="Right"></Setter>
+            <Setter Property="Margin" Value="5"></Setter>
+        </Style>
+        <Style x:Key="Margen1">
+            <Setter Property="Label.Margin" Value="1"></Setter>
+            <Setter Property="TextBox.Margin" Value="1"></Setter>
+            <Setter Property="Image.Margin" Value="1"></Setter>
+        </Style>
+        <Style TargetType="{x:Type Border}" x:Key="Caja">
+            <Setter Property="BorderBrush" Value="Black"></Setter>
+            <Setter Property="BorderThickness" Value="2"></Setter>
+            <Setter Property="CornerRadius" Value="2"></Setter>
+            <Setter Property="Margin" Value="5"></Setter>
+        </Style>
+        <Style TargetType="{x:Type Border}" x:Key="CajasCaja2">
+            <Setter Property="BorderBrush" Value="Beige"></Setter>
+            <Setter Property="BorderThickness" Value="1"></Setter>
+            <Setter Property="CornerRadius" Value="3"></Setter>
+            <Setter Property="Margin" Value="10"></Setter>
+            <Setter Property="MinWidth" Value="200"></Setter>
+        </Style>
+        <Style TargetType="{x:Type StackPanel}">
+            <Setter Property="Margin" Value="5"></Setter>
+        </Style>
+        <Style TargetType="{x:Type Image}">
+            <Setter Property="Grid.Column" Value="1"></Setter>
+            <Setter Property="Stretch" Value="Fill"></Setter>
+            <Setter Property="Margin" Value="10"></Setter>
+        </Style>
+    </Window.Resources>
     <DockPanel LastChildFill="True">
         <DockPanel DockPanel.Dock="Bottom" LastChildFill="False">
             <TextBlock DockPanel.Dock="Left" Margin="5">Javier Catalá</TextBlock>
-            <Button DockPanel.Dock="Right" Margin="5" Content="Cancelar"></Button>
-            <Button DockPanel.Dock="Right" Margin="5" Content="Aceptar"></Button>
+            <Button Content="Cancelar"></Button>
+            <Button Content="Aceptar"></Button>
         </DockPanel>
-        <TextBlock DockPanel.Dock="Top" HorizontalAlignment="Center" FontSize="30" Margin="10" FontWeight="Bold">
-            Formulario
-        </TextBlock>
+        <TextBlock Style="{StaticResource Titulo}">Formulario</TextBlock>
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="2*"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Image Grid.Column="1" Stretch="Fill" Source="/foto.jpg" Margin="10"></Image>
-            <StackPanel Grid.Column="0" Margin="5">
-                <Border BorderBrush="Black" BorderThickness="2" CornerRadius="5" Margin="5" Background="LightBlue">
-
+            <Image Source="/foto.jpg"></Image>
+            <StackPanel Grid.Column="0">
+                <Border Style="{StaticResource Caja}" Background="LightBlue">
                     <Grid Margin="5">
                         <Grid.RowDefinitions>
                             <RowDefinition></RowDefinition>
@@ -35,49 +71,44 @@
                             <ColumnDefinition Width="*"></ColumnDefinition>
                             <ColumnDefinition Width="25"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <Label Grid.Row="0" Grid.Column="0" Margin="1">Nombre</Label>
-                        <TextBox Grid.Row="0" Grid.Column="1" Margin="1"></TextBox>
-                        <Image Grid.Row="0" Grid.Column="2" Source="/info.png"></Image>
-                        <Label Grid.Row="1" Grid.Column="0" Margin="1">Edad</Label>
-                        <TextBox Grid.Row="1" Grid.Column="1" Margin="1"></TextBox>
-                        <Image Grid.Row="1" Grid.Column="2" Source="/info.png" Margin="1"></Image>
-                        <Label Grid.Row="2" Grid.Column="0" Margin="1">Dirección</Label>
-                        <TextBox Grid.Row="2" Grid.Column="1" Margin="1"></TextBox>
-                        <Image Grid.Row="2" Grid.Column="2" Source="/info.png" Margin="1"></Image>
+                        <Label Style="{StaticResource Margen1}" Grid.Row="0" Grid.Column="0">Nombre</Label>
+                        <TextBox Style="{StaticResource Margen1}" Grid.Row="0" Grid.Column="1"></TextBox>
+                        <Image Style="{StaticResource Margen1}" Grid.Row="0" Grid.Column="2" Source="/info.png"></Image>
+                        <Label Style="{StaticResource Margen1}" Grid.Row="1" Grid.Column="0">Edad</Label>
+                        <TextBox Style="{StaticResource Margen1}" Grid.Row="1" Grid.Column="1"></TextBox>
+                        <Image Style="{StaticResource Margen1}" Grid.Row="1" Grid.Column="2" Source="/info.png"></Image>
+                        <Label Style="{StaticResource Margen1}" Grid.Row="2" Grid.Column="0">Dirección</Label>
+                        <TextBox Style="{StaticResource Margen1}" Grid.Row="2" Grid.Column="1"></TextBox>
+                        <Image Style="{StaticResource Margen1}" Grid.Row="2" Grid.Column="2" Source="/info.png"></Image>
                     </Grid>
                 </Border>
-                <Border BorderThickness="2" CornerRadius="5" Margin="5" BorderBrush="Black" Background="LightGreen">
+                <Border Style="{StaticResource Caja}" Background="LightGreen">
                     <WrapPanel MinWidth="475">
-                        <Border BorderBrush="Beige" MinWidth="200" BorderThickness="1" CornerRadius="3" Margin="10">
-                            <TextBlock>
-                                <StackPanel Margin="5">
-                                    <Label>Aficiones</Label>
-                                        <StackPanel>
-                                            <CheckBox>Hacer deporte</CheckBox>
-                                            <CheckBox>Viajar</CheckBox>
-                                            <CheckBox>Ver series</CheckBox>
-                                            <CheckBox>Leer cómics</CheckBox>
-                                        </StackPanel>
+                        <Border Style="{StaticResource CajasCaja2}">
+                            <StackPanel>
+                                <Label>Aficiones</Label>
+                                <StackPanel>
+                                    <CheckBox>Hacer deporte</CheckBox>
+                                    <CheckBox>Viajar</CheckBox>
+                                    <CheckBox>Ver series</CheckBox>
+                                    <CheckBox>Leer cómics</CheckBox>
                                 </StackPanel>
-                            </TextBlock>
+                            </StackPanel>
                         </Border>
-                        <Border BorderBrush="Beige" MinWidth="200" BorderThickness="1" CornerRadius="3" Margin="10">
-                            <TextBlock>
-                                <StackPanel Margin="5">
-                                    <Label>Estado civil</Label>
-                                    <StackPanel>
-                                        <RadioButton>Soltero</RadioButton>
-                                        <RadioButton>Casado</RadioButton>
-                                        <RadioButton>Divorciado</RadioButton>
-                                        <RadioButton>Viudo</RadioButton>
-                                    </StackPanel>
+                        <Border Style="{StaticResource CajasCaja2}">
+                            <StackPanel>
+                                <Label>Estado civil</Label>
+                                <StackPanel>
+                                    <RadioButton>Soltero</RadioButton>
+                                    <RadioButton>Casado</RadioButton>
+                                    <RadioButton>Divorciado</RadioButton>
+                                    <RadioButton>Viudo</RadioButton>
                                 </StackPanel>
-                            </TextBlock>
+                            </StackPanel>
                         </Border>
                     </WrapPanel>
                 </Border>
             </StackPanel>
         </Grid>
-
     </DockPanel>
 </Window>
