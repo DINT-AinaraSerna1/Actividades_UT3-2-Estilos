@@ -24,19 +24,48 @@ namespace Tema3_CalculadoraDinamica
         {
             InitializeComponent();
 
-            Button boton1 = new ();
-            TextBlock textBlock1 = new ();
-            Viewbox viewbox1 = new ();
-                       
+            List<TextBlock> textBlocks = new List<TextBlock>();
+            TextBlock textBlock;
+            List<Viewbox> viewboxes = new ();
+            Viewbox viewbox;
 
-            textBlock1.Text = "1";
-            viewbox1.Child = textBlock1;
-            boton1.Content = viewbox1;
-            Secundario.Children.Add(boton1);
-            Grid.SetColumn (boton1, 0);
-            Grid.SetRow (boton1, 0);
-           
-            boton1.Click += Button_Click;
+            List<Button> buttons = new List<Button>();
+            Button boton;
+            int tag = 1;
+            for (int i = 0; i < 3; i++) 
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    boton = new();
+                    viewbox = new();
+                    textBlock = new();
+
+                    textBlock.Text = tag.ToString();
+                    viewbox.Child = textBlock;
+                    boton.Content = viewbox;
+                    boton.Tag = tag.ToString();
+
+                    Secundario.Children.Add(boton);
+                    Grid.SetColumn(boton, j);
+                    Grid.SetRow(boton, i);
+
+                    buttons.Add(boton);
+                    viewboxes.Add(viewbox);
+                    textBlocks.Add(textBlock);
+                    tag++;
+                }
+            }
+            boton = new();
+            viewbox = new();
+            textBlock = new();
+            textBlock.Text = "0";
+            viewbox.Child = textBlock;
+            boton.Content = viewbox;
+            boton.Tag = textBlock.Text;
+            Principal.Children.Add(boton);
+            Grid.SetRow(boton, 2);
+            buttons.Add(boton);
+            viewboxes.Add(viewbox);
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
